@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for news in news %}
+
+<div class="ui container">
+
+<p><h1>
+<script>
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+const d = new Date();
+document.write(monthNames[d.getMonth()] + " Security Awareness Newsletter" );
+</script>
+</h1>
+</p>
+
+<!-- Main Content --> 
+
+      <p> 
+
+      [Security newsletter boilerplate content]
+
+      </p>
+
+<!-- Links -->
+
+      <p>
+        <h1> Cybersecurity Tips </h1>
+      </p>
+
+      <p>
+        <b>Tip #1: </b>{{ news['tip1'] }}
+      </p>
+
+      <p>
+        <b>Tip #2: </b>{{ news['tip2'] }}
+      </p>
+
+      <p>
+        <b>Tip #3: </b>{{ news['tip3'] }}
+      </p>
+
+
+<!-- Links -->
+
+      <p>
+        <h1>Cybersecurity in the News</h1>
+      </p>
+
+      <p>      
+        <b>{{ news['link1name'] }}</b>
+        <a href="{{ news['link1'] }}">{{ news['link1'] }}</a> 
+      </p>
+
+      <p>
+        <b>{{ news['link2name'] }}</b>
+        <a href="{{ news['link2'] }}">{{ news['link2'] }}</a> 
+      </p>
+
+      <p>
+        <b>{{ news['link3name'] }}</b>
+        <a href="{{ news['link3'] }}">{{ news['link3'] }}</a>
+      </p>
+
+<!-- Export Options -->
+
+    <div>
+      <button class="ui green basic button" onClick="window.print();return false;">
+        Print this page
+      </button>
+    </div>
+
+</div>
+
+      {% endfor %}
+
+{% endblock %}
