@@ -18,51 +18,47 @@ document.write(monthNames[d.getMonth()] + " Security Awareness Newsletter" );
 
 <!-- Main Content --> 
 
-      <p> 
+      <p><center><img height="35%" width="35%" style="border:1px solid #000000" src="{{ news['themeimg'] }}"></p></center><br>
 
-      [Security newsletter boilerplate content]
+      <p>This month's security newsletter theme is {{ news['themename'] }}</p>
+
+      <p>As always:</p>
+
+<ul>
+  <li><b>No one will ever ask you for your password</b>. Do not provide sensitive personal information (like usernames and passwords) over phone or email.</li>
+  <li>Do not click on links or attachments from senders that you do not recognize.</li>
+  <li>Do not respond to phishing emails so that we don't give away how our e-mail signature looks.</li>
+  <li>Be especially wary of .zip or other compressed or executable (.exe) file types.</li>
+  <li>Watch for email senders that use suspicious or misleading domain names. Always double-check if the sender's email address seems right. Call them directly if you are unsure.</li>
+</ul>
 
       </p>
 
-<!-- Links -->
+    <p>If something seems wrong - <b>DO</b> notify IT.</p>
+    <p>Thank you for all that you do to keep yourself and our organization safe from threats.</p>
+    <p>Be sure to check out the following cybersecurity tips, links, and news articles selected for this month's newsletter.</p>
 
-      <p>
-        <h1> Cybersecurity Tips </h1>
-      </p>
-
-      <p>
-        <b>Tip #1: </b>{{ news['tip1'] }}
-      </p>
-
-      <p>
-        <b>Tip #2: </b>{{ news['tip2'] }}
-      </p>
-
-      <p>
-        <b>Tip #3: </b>{{ news['tip3'] }}
-      </p>
 
 
 <!-- Links -->
 
-      <p>
-        <h1>Cybersecurity in the News</h1>
-      </p>
+      <p><h1> Cybersecurity Tips </h1></p>
 
-      <p>      
-        <b>{{ news['link1name'] }}</b>
-        <a href="{{ news['link1'] }}">{{ news['link1'] }}</a> 
-      </p>
+      <p><b>Tip #1: </b>{{ news['tip1'] }}</p>
 
-      <p>
-        <b>{{ news['link2name'] }}</b>
-        <a href="{{ news['link2'] }}">{{ news['link2'] }}</a> 
-      </p>
+      <p><b>Tip #2: </b>{{ news['tip2'] }}</p>
 
-      <p>
-        <b>{{ news['link3name'] }}</b>
-        <a href="{{ news['link3'] }}">{{ news['link3'] }}</a>
-      </p>
+      <p><b>Tip #3: </b>{{ news['tip3'] }}</p>
+
+
+<!-- Links -->
+
+      <p><h1>Cybersecurity Links and News</h1></p>
+      <p><b>{{ news['link1name'] }}</b><a href="{{ news['link1'] }}">{{ news['link1'] }}</a> </p>
+
+      <p><b>{{ news['link2name'] }}</b><a href="{{ news['link2'] }}">{{ news['link2'] }}</a> </p>
+
+      <p><b>{{ news['link3name'] }}</b><a href="{{ news['link3'] }}">{{ news['link3'] }}</a></p>
 
 <!-- Export Options -->
 
