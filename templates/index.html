@@ -2,9 +2,9 @@
 {% block content %}
 {% for news in news %}
 
-<div class="ui container">
+<div class="uk-container uk-container-xsmall">
 
-<p><h2>
+<h1>
 <script>
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
@@ -13,12 +13,11 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 const d = new Date();
 document.write(monthNames[d.getMonth()] + " Security Awareness Newsletter" );
 </script>
-</h2>
-</p>
+</h1>
 
 <!-- Main Content --> 
 
-      <p><center><img height="25%" width="25%" style="border:1px solid #000000" src="{{ news['themeimg'] }}"></p></center><br>
+      <center><img height="25%" width="25%" style="border:1px solid #000000" src="{{ news['themeimg'] }}"></center>
 
       <p>This month's security newsletter theme is <b>{{ news['themename'] }}</b></p>
 
@@ -33,7 +32,7 @@ document.write(monthNames[d.getMonth()] + " Security Awareness Newsletter" );
 </ul>
 
       </p>
-    <p>Look for the lock symbol when browsing. This signifies that the browser is encrypting your data in transit so that hackers cannot intercept it.</p><p><img height="10%" width="10%" src="/static/lock.png"></p>
+    <p>Look for the lock symbol when browsing: <img src="/static/lock.png"> This signifies that the browser is encrypting your data in transit so that hackers cannot intercept it.</p>
     <p>If something seems wrong - <b>DO</b> notify IT.</p>
     <p>Thank you for all that you do to keep yourself and our organization safe from threats.</p>
     <p>Be sure to check out the following cybersecurity tips, links, and news articles selected for this month's newsletter.</p>
@@ -44,26 +43,26 @@ document.write(monthNames[d.getMonth()] + " Security Awareness Newsletter" );
 
       <p><h1> Cybersecurity Tips </h1></p>
 
-      <p><b>Tip #1: </b>{{ news['tip1'] }}</p>
+      <p><img src="static/bulb.svg"><b> Tip #1: </b>{{ news['tip1'] }}</p>
 
-      <p><b>Tip #2: </b>{{ news['tip2'] }}</p>
+      <p><img src="static/bulb.svg"><b> Tip #2: </b>{{ news['tip2'] }}</p>
 
-      <p><b>Tip #3: </b>{{ news['tip3'] }}</p>
+      <p><img src="static/bulb.svg"><b> Tip #3: </b>{{ news['tip3'] }}</p>
 
 
 <!-- Links -->
 
       <p><h1>Cybersecurity Links and News</h1></p>
-      <p><b>{{ news['link1name'] }} </b><a href="{{ news['link1'] }}">{{ news['link1'] }}</a> </p>
+      <p><img src="static/link.svg"><b> {{ news['link1name'] }} </b><a href="{{ news['link1'] }}">{{ news['link1'] }}</a> </p>
 
-      <p><b>{{ news['link2name'] }} </b><a href="{{ news['link2'] }}">{{ news['link2'] }}</a> </p>
+      <p><img src="static/link.svg"><b> {{ news['link2name'] }} </b><a href="{{ news['link2'] }}">{{ news['link2'] }}</a> </p>
 
-      <p><b>{{ news['link3name'] }} </b><a href="{{ news['link3'] }}">{{ news['link3'] }}</a></p>
+      <p><img src="static/link.svg"><b> {{ news['link3name'] }} </b><a href="{{ news['link3'] }}">{{ news['link3'] }}</a></p>
 
 <!-- Export Options -->
 
     <div>
-      <button class="ui green basic button" onClick="window.print();return false;">
+      <button class="uk-button uk-button-primary" onClick="window.print();return false;">
         Print this page
       </button>
     </div>
